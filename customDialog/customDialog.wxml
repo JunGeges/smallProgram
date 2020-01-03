@@ -1,0 +1,12 @@
+<view class="container {{isShowDialog?'resetContainer':''}}">
+	<view wx:for="{{datas}}" wx:key="id">
+		{{item.content}}
+	</view>
+</view>
+<!-- <view class="mask" catchtouchmove="returnMove"></view> -->
+<view class="mask" wx:if="{{isShowDialog}}"></view>
+<view class="dialog" wx:if="{{isShowDialog}}">
+	<view wx:for="{{datas}}" wx:key="id">
+		{{item.content}}
+	</view>
+</view>
